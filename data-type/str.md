@@ -17,3 +17,20 @@ print(v)
 Lvxiaoteng
 ```
 
+**str.casefold()** 和 **str.lower()**
+
+这两种方法均表示将大写字符串变为小写：
+
+```py
+c = "ALex"
+v1 = str.casefold(c)
+v2 = str.lower(c)
+print(v1)
+print(v2)
+
+# 程序执行结果
+alex
+alex
+```
+
+> 不同的是 `casefold()`比 `lower()` 功能更加丰富，它可以将其他国家的语言大写转化为小写，而 `lower()` 貌似只能转化字母
