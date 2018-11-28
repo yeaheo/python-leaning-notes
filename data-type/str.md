@@ -225,7 +225,7 @@ True False
 
 **isdecimal()**、**isdigit()** 和 **isnumeric()**
 
-该三种方法主要是判断字符串是否只包含数字，但是这三种方法也是区别的，`isdecimal()`只是判断 `0-9`普通数字，`isdigit()` 不仅可以判断普通数字而且还可以判断特殊数字，例如`②` ，而 `isnumeric()`不仅可以判断普通数字和特殊数字，而且还可以判断汉子数字，例如`二`
+该三种方法主要是判断字符串是否只包含数字，但是这三种方法也是区别的，`isdecimal()`只是判断 `0-9`普通数字,检查字符串是否只包含十进制字符，如果是返回 true，否则返回 false，`isdigit()` 不仅可以判断普通数字而且还可以判断特殊数字，例如`②` ，而 `isnumeric()`不仅可以判断普通数字和特殊数字，而且还可以判断汉子数字，例如`二`
 
 ```python
 test1 = "123"
@@ -246,6 +246,32 @@ False False True
 > 建议用的较多的是 `isdecimal()`方法，因为普通数字可以进行数值运算
 
 **isidentifier()**
+
+该方法用于判断字符串是否是有效的 Python 标识符，可用来判断变量名是否合法，返回值为布尔值：
+
+```python
+t1 = "test"
+t2 = "123"
+t3 = "abc123"
+t4 = "abc_123"
+t5 = "_abc123"
+t6 = "123abc"
+t7 = "&123b"
+for i in t1,t2,t3,t4,t5,t6,t7:
+    v = i.isidentifier()
+    print(v)
+
+# 程序执行结果
+True
+False
+True
+True
+True
+False
+False
+```
+
+> Python 标识符一般由数字、字母和下划线组成且不能以数字开头
 
 **islower()** 和 **isupper()**
 
@@ -318,25 +344,104 @@ False
 True
 ```
 
-**rjust()** 和 **ljust()**
+**rjust(width[, fillchar])** 和 **ljust(width[, fillchar])**
 
+`ljust()`返回一个原字符串左对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。
 
+`rjust()`返回一个原字符串右对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。
+
+```python
+test = "alex"
+v1 = test.ljust(20,'*')
+v2 = test.rjust(20,'*')
+print(v1)
+print(v2)
+
+# 程序执行结果
+alex****************
+****************alex
+```
 
 **strip()、lstrip() 和 rstrip()**
 
+此三类方法主要用来去除字符串中的空格或者指定字符，`strip()`去除左右，`lstrip()`去除左边的空格或者指定字符，`rstrip()`去除右边的空格或者指定字符：
 
+```python
+## 去掉空格
+test = " aalexc "
+v1 = test.strip()
+v2 = test.lstrip()
+v3 = test.rstrip()
+print(v1)
+print(v2)
+print(v3)
+
+# 程序执行结果
+aalexc
+aalexc #右边带空格
+ aalexc
+
+## 去掉指定字符
+test = "aalexc"
+v2 = test.lstrip('a')
+v3 = test.rstrip('c')
+print(v2)
+print(v3)
+
+# 程序执行结果
+lexc
+aalex
+```
 
 **maketrans()和translate()**
 
+`maketrans()`创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。两个字符串的长度必须相同，为一一对应的关系。一般与 `translate()`同时使用
 
+```python
+test = 'ABCDEFG'
+valu = '1234567'
+v1 = str.maketrans(test,valu)
+a = "ABOFUFG"
+v2 = a.translate(v1)
+print(v2)
+
+# 程序输出结果
+12O6U67
+```
+
+> **注：**Python3.4已经没有string.maketrans()了，取而代之的是内建函数: bytearray.maketrans()、bytes.maketrans()、str.maketrans()
 
 **partition()和rpartition()**
 
+该方法用来按照指定字符分割字符串，只能将字符串分成三份，而且包含分割字符串时使用的字符，`rpartition()`表示从右开始分割
 
+```python
+test = "cxcffdfn"
+v1 = test.partition('f')
+v2 = test.rpartition('f')
+print(v1)
+print(v2)
 
-**replace()**
+# 程序执行结果
+('cxc', 'f', 'fdfn')
+('cxcffd', 'f', 'n')
+```
 
+**replace(old, new[, max])**
 
+replace() 方法把字符串中的 old（旧字符串） 替换成 new(新字符串)，如果指定第三个参数max，则替换不超过 max 次
+
+```python
+test = "abccxcxuhv"
+v1 = test.replace('c','e')
+v2 = test.replace('c','e',2)
+print(v1)
+print(v2)
+
+# 程序执行结果
+abeexexuhv
+abeexcxuhv
+```
 
 **swapcase()**
 
@@ -353,9 +458,75 @@ AbC
 
 **split()、rsplit()、splitlines()**
 
+split(str="", num=string.count(str)
 
+`split()`通过指定分隔符对字符串进行切片，如果参数num 有指定值，则仅分隔 num 个子字符串
+
+```python
+test = "acuhsiaufshiasfdh"
+v1 = test.split('s')
+v2 = test.split('s',2)
+print(v1)
+print(v2)
+
+# 程序执行结果
+['acuh', 'iauf', 'hia', 'fdh']
+['acuh', 'iauf', 'hiasfdh']
+```
+
+`rsplit()`和 `split()` 类似，只是从右开始分割字符串
+
+```python
+test = "acuhsiaufshiasfdh"
+v1 = test.split('s')
+v2 = test.split('s',2)
+v3 = test.rsplit('s')
+v4 = test.rsplit('s',1)
+print(v1)
+print(v2)
+print(v3)
+print(v4)
+
+# 程序执行结果
+['acuh', 'iauf', 'hia', 'fdh']
+['acuh', 'iauf', 'hiasfdh']
+['acuh', 'iauf', 'hia', 'fdh']
+['acuhsiaufshia', 'fdh']
+```
+
+`splitlines([keepends])`是按照行('\r', '\r\n', \n')分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。
+
+```python
+test = "audv\ncuxznc"
+v1 = test.splitlines()
+v2 = test.splitlines(True)
+v3 = test.splitlines(False)
+print(v1)
+print(v2)
+print(v3)
+
+# 程序执行结果
+['audv', 'cuxznc']
+['audv\n', 'cuxznc']
+['audv', 'cuxznc']
+```
+
+> 上述分割方法不带分隔符，对比 `partition()`
 
 **zfill()**
+
+该方法返回指定长度的字符串，原字符串右对齐，前面填充0
+
+```python
+t = "alex"
+v = t.zfill(20)
+print(v)
+
+# 程序执行结果
+0000000000000000alex
+```
+
+
 
 
 
