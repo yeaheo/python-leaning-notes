@@ -526,6 +526,19 @@ print(v)
 0000000000000000alex
 ```
 
+一般我们常用的就那么几个，主要包括：
+
+```python
+str.join()
+str.split()
+str.find()
+str.strip()
+str.upper()
+str.lower()
+str.replace()
+
+```
+
 
 
 
