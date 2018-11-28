@@ -8,7 +8,7 @@
 
 该方法表示将字符串首字母变为大写：
 
-```py
+```python
 test = 'lvxiaoteng'
 v = str.capitalize(test)
 print(v)
@@ -21,7 +21,7 @@ Lvxiaoteng
 
 这两种方法均表示将大写字符串变为小写：
 
-```py
+```python
 c = "ALex"
 v1 = str.casefold(c)
 v2 = str.lower(c)
@@ -34,4 +34,24 @@ alex
 ```
 
 > 不同的是 `casefold()`比 `lower()` 功能更加丰富，它可以将其他国家的语言大写转化为小写，而 `lower()` 貌似只能转化字母
+
+**str.center(width[, fillchar])**
+
+该方法返回一个指定宽度 width 并且指定的字符串居中的字符串，fillchar 为填充的字符，默认为空格：
+
+```python
+test = "ABC"
+v = test.center(21)
+print(v)
+v1 = test.center(21,'*')
+print(v1)
+
+# 程序执行结果
+        ABC         
+*********ABC*********
+```
+
+> 需要注意的是返回的字符串长度是指定的宽度，而且原字符串居中，其他空缺用指定的字符填充，默人空格
+
+
 
