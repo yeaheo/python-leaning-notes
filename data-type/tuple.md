@@ -44,8 +44,6 @@ Traceback (most recent call last):
 NameError: name 't' is not defined
 ```
 
-
-
 元组与列表类似，可以利用索引和切片取值,切片返回值依然为元组：
 
 ```python
@@ -178,5 +176,19 @@ print(v)
 
 # 程序执行结果
 2
+```
+
+**enumerate()**
+
+该方法用于显示列表、元组等的索引和值，可以指定索引值，后面依次增加：
+
+```python
+tu = ("alex","eric","rain")
+for index,elem in enumerate(tu,10):
+    print(index,elem)
+# 程序执行结果
+10 alex
+11 eric
+12 rain
 ```
 
