@@ -12,6 +12,19 @@
 
 ## 字典的一般用法
 
+**key in dict**
+
+可以用 `in`判断键是否在 `dict`里：
+
+```python
+d = {'name':'lvxiaoteng','age': 25,'site':'https://yeaheo.com'}
+v = 'name' in d
+print(v)
+
+# 程序执行结果
+True
+```
+
 **取值:**
 
 字典可以根据索引进行取值：
