@@ -286,6 +286,7 @@ site
 该方法用于删除字典的指定的 key,可以获取删除的键和值,可以指定返回默认值
 
 ```python
+# 示例1
 d = {'name':'lvxiaoteng','age': 25,'site':'https://yeaheo.com'}
 v = d.pop('age')
 print(v)
@@ -295,6 +296,7 @@ print(d)
 25
 {'name': 'lvxiaoteng', 'site': 'https://yeaheo.com'}
 
+# 示例2
 d = {'name':'lvxiaoteng','age': 25,'site':'https://yeaheo.com'}
 v1 = d.pop('age',90)
 v2 = d.pop('hah',90)
@@ -318,6 +320,15 @@ print(d)
 # 程序执行结果
 ('site', 'https://yeaheo.com')
 {'name': 'lvxiaoteng', 'age': 25}
+
+d = {'name':'lvxiaoteng','age': 25,'site':'https://yeaheo.com'}
+d.popitem()
+x,y = d.popitem()
+print(x)
+print(y)
+# 程序执行结果
+age
+25
 ```
 
 **setdefault()**
@@ -344,7 +355,7 @@ lvxiaoteng
 
 **update()**
 
-该方法用于更新字典：
+该方法用于更新字典，键存在的更新其值，不存在的新增键值：
 
 ```python
 #示例1
