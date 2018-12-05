@@ -13,6 +13,11 @@
     * [集合-set](data-type/set.md)
 * [基本运算符](operators/README.md)
 * [函数相关](function/README.md)
+    * [全局变量和局部变量](function/variable.md)
+    * [函数即变量](function/functions-and-variables.md)
+    * [递归函数](function/recursive-function.md)
+    * [匿名函数](function/anonymous-function.md)
+    * [函数式编程](function/functional-programming.md)
 
 ## Python 基本框架
 
