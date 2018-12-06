@@ -18,6 +18,7 @@
     * [递归函数](function/recursive-function.md)
     * [匿名函数](function/anonymous-function.md)
     * [函数式编程](function/functional-programming.md)
+    * [map函数](function/map.md)
 
 ## Python 基本框架
 
