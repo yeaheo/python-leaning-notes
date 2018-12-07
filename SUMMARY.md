@@ -19,6 +19,9 @@
     * [匿名函数](function/anonymous-function.md)
     * [函数式编程](function/functional-programming.md)
     * [map函数](function/map.md)
+    * [filter函数](function/filter.md)
+    * [reduce函数](function/reduce.md)
+    * [其他内置函数](function/other-func.md)
 
 ## Python 基本框架
 
