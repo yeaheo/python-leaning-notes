@@ -44,7 +44,7 @@
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © aeric.io 2017-2018",
+            "copyright": "Copyright © <a href=https://aeric.io>aeric.io</a> 2017-2018",
             "modify_label": "Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
