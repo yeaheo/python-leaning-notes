@@ -5,7 +5,7 @@
     "author": "Eric Lv",
     "links": {
         "sidebar": {
-            "Eric Lv": "https://yeaheo.com"
+            "Eric Lv": "https://aeric.io"
         }
     },
     "plugins": [
@@ -44,7 +44,7 @@
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © yeaheo.com 2017-2018",
+            "copyright": "Copyright © aeric.io 2017-2018",
             "modify_label": "Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
