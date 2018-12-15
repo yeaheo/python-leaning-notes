@@ -23,9 +23,20 @@
     * [reduce函数](function/reduce.md)
     * [其他内置函数](function/other-func.md)
 * [文件操作](file/README.md)
-* [生成器](func/README.md)
-* [迭代器](func/README.md)
-* [装饰器](func/README.md)
+* [生成器](func/generator-function.md)
+* [迭代器](func/iterator-function.md)
+* [装饰器](func/decorator-function.md)
+* [模块相关](module/README.md)
+    * [time 模块](module/module-time.md)
+    * [random 模块](module/module-random.md)
+    * [os 模块](module/module-os.md)
+    * [sys 模块](module/module-sys.md)
+    * [json&pickle 模块](module/module-json&pickle.md)
+    * [loging 模块](module/module-loging.md)
+    * [re 模块](module/module-re.md)
+    * [shelve 模块](module/module-shelve.md)
+    * [xml 模块](module/module-xml.md)
+    * [其他模块](module/module-other.md)
 
 ## Python 基本框架
 
