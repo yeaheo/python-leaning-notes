@@ -60,3 +60,68 @@ print(randb)
 # 取不到 3
 ```
 
+**random.choice()**
+
+该方法用来在给定的列表中随机选出一个：
+
+```python
+import time
+
+a = [1,22,3,4,55,6,[2,3,4],(1,2,3)]
+rande = random.choice(a)
+print(rande)
+
+# 程序执行结果
+第一次：[2, 3, 4]
+第二次：2
+```
+
+**random.sample()**
+
+该方法功能和 `random.choice()`方法类似，也是从指定参数中随机选出，不同的是该方法可以指定选出参数的个数,输出结果为一个列表：
+
+```python
+import time
+
+randf = random.sample(a,2)
+print(randf)
+
+# 程序执行结果
+第一次：[1, 3]
+第二次：[22, (1, 2, 3)]
+```
+
+**random.shuffle()**
+
+该方法用于将给定的参数顺序随机再排布：
+
+```python
+import time
+
+item=[1,3,5,7,9]
+random.shuffle(item)
+print(item)
+
+# 程序执行结果
+第一次：[7, 1, 9, 5, 3]
+第二次：[3, 7, 9, 5, 1]
+```
+
+**利用`random`模块处理随机验证码**
+
+实例1：
+
+```python
+import time
+def check_code():
+    vcode = ""
+    for i in range(5):
+        num = random.randint(0,9)
+        alf1 = chr(random.randint(65,90))
+        alf2 = chr(random.randint(97,122))
+        c = str(random.choice([num,alf1,alf2]))
+        vcode += c
+    return vcode
+print(check_code())
+```
+
