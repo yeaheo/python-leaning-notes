@@ -37,6 +37,13 @@
     * [shelve 模块](module/module-shelve.md)
     * [xml 模块](module/module-xml.md)
     * [其他模块](module/module-other.md)
+* [类和对象相关](module/README.md)
+    * [面向对象设计](class/object-oriented-design.md)
+    * [关于类](class/about-class.md)
+    * [关于对象](class/about-object.md)
+    * [类属性操作](class/class-operation.md)
+    * [实例属性操作](class/Instance-property-operation.md)
+    * [对象和实例属性](class/object-and-instance-properties.md)
 
 ## Python 基本框架
 
