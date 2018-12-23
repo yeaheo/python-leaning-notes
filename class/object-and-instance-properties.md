@@ -66,4 +66,67 @@ print(p1.country)
 {'name': 'alex', 'salary': 'male'}
 China                                 # 类中定义
 ```
+还有一种情形是这样的：
 
+```python
+class Employee:
+    '所有员工的基类'
+    
+    
+    li = ['a','b']
+    
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+        Employee.empCount += 1
+        print('---',country)
+
+    def displayCount(self):
+        print("Total Employee %d" % Employee.empCount)
+
+    def displayEmployee(self):
+        print("Name : ", self.name, ", Salary: ", self.salary)
+
+
+p1 = Employee('alex','male')
+print(p1.__dict__)
+
+print(p1.li)
+p1.li.append('c')
+print(p1.li)
+print(Employee.li)
+
+# 程序输出结果
+['a', 'b']
+['a', 'b', 'c']
+['a', 'b', 'c']     # 类数据属性变
+```
+还有一种情形是：
+
+```python
+country = "AAA"
+class Employee:
+    '所有员工的基类'
+    empCount = 0
+    country = "China"
+    li = ['a','b']
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+        Employee.empCount += 1
+        print('---',country)
+
+    def displayCount(self):
+        print("Total Employee %d" % Employee.empCount)
+
+    def displayEmployee(self):
+        print("Name : ", self.name, ", Salary: ", self.salary)
+
+p1 = Employee('alex','male')
+print(p1.__dict__)
+
+print(p1.li)
+p1.li = [1,2,3]
+print(p1.li)
+print(Employee.li)      # 类属性不变
+```
