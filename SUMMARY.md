@@ -44,6 +44,9 @@
     * [类属性操作](class/class-operation.md)
     * [实例属性操作](class/Instance-property-operation.md)
     * [对象和实例属性](class/object-and-instance-properties.md)
+    * [静态属性](class/static-attribute.md)
+    * [类方法](class/class-methord.md)
+    * [静态方法](class/sta-methord.md)
 
 ## Python 基本框架
 
