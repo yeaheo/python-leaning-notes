@@ -2,10 +2,10 @@
     "title": "Python 3 学习笔记",
     "description": "Python 3 学习笔记",
     "language": "zh-hans",
-    "author": "Eric Lv",
+    "author": "Aeric Lve",
     "links": {
         "sidebar": {
-            "Eric Lv": "https://aeric.io"
+            "Aeric Blog": "https://aeric.io"
         }
     },
     "plugins": [
@@ -44,7 +44,7 @@
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © <a href=https://aeric.io>aeric.io</a> 2017-2018",
+            "copyright": "Copyright © <a href=https://aeric.io>aeric.io</a> 2017-2019",
             "modify_label": "Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
